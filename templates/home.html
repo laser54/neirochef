@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4 mb-4">Добро пожаловать в NeiroChef!</h1>
+    {% if user.is_authenticated %}
+        <p class="lead">Рады видеть вас снова, {{ user.email }}!</p>
+    {% else %}
+        <p class="lead">Пожалуйста, войдите через Google для доступа к сервису.</p>
+        <a href="{% url 'account_login' %}" class="btn btn-primary btn-lg">
+            Войти через Google
+        </a>
+    {% endif %}
+</div>
+{% endblock %} 
