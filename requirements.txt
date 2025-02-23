@@ -1,0 +1,8 @@
+django==5.1.4
+django-allauth
+python-dotenv
+requests
+PyJWT
+cryptography
+psycopg2-binary
+dj-database-url
